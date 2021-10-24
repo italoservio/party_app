@@ -96,7 +96,7 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_below="@+id/input_email"
-      android:layout_alignStart="@+id/input_email"
+      android:layout_alignStart="@+id/input_password"
       android:layout_marginTop="15dp"
       android:fontFamily="@font/comfortaa_regular"
       android:text="@string/sign_up_activity_password"
@@ -124,17 +124,28 @@
       android:layout_height="65dp"
       android:layout_below="@id/input_password"
       android:layout_marginLeft="20dp"
-      android:layout_marginTop="15dp"
+      android:layout_marginTop="20dp"
       android:layout_marginRight="20dp"
-      android:layout_marginBottom="80dp"
+      android:layout_marginBottom="20dp"
       android:background="@drawable/default_radius"
       android:backgroundTint="@color/blue_button"
       android:fontFamily="@font/comfortaa_bold"
       android:letterSpacing="0"
-      android:text="Submit"
+      android:text="@string/sign_up_activity_submit"
       android:textAllCaps="false"
       android:textColor="@color/white"
       android:textSize="16sp" />
+
+    <TextView
+      android:id="@+id/link_sign_up"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/button_submit"
+      android:layout_centerHorizontal="true"
+      android:layout_marginBottom="50dp"
+      android:fontFamily="@font/comfortaa_regular"
+      android:text="@string/sign_up_activity_back_to_login"
+      android:textSize="14sp" />
 
   </RelativeLayout>
 

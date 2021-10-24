@@ -62,8 +62,8 @@
       android:fontFamily="@font/comfortaa_regular"
       android:paddingStart="12dp"
       android:paddingEnd="12dp"
-      android:textCursorDrawable="@color/black"
-      android:singleLine="true" />
+      android:singleLine="true"
+      android:textCursorDrawable="@color/black" />
 
     <TextView
       android:id="@+id/input_password_label"
@@ -89,8 +89,8 @@
       android:inputType="textPassword"
       android:paddingStart="12dp"
       android:paddingEnd="12dp"
-      android:textCursorDrawable="@color/black"
-      android:singleLine="true" />
+      android:singleLine="true"
+      android:textCursorDrawable="@color/black" />
 
     <Button
       android:id="@+id/button_submit"
@@ -98,9 +98,9 @@
       android:layout_height="65dp"
       android:layout_below="@id/input_password"
       android:layout_marginLeft="20dp"
-      android:layout_marginTop="15dp"
+      android:layout_marginTop="20dp"
       android:layout_marginRight="20dp"
-      android:layout_marginBottom="80dp"
+      android:layout_marginBottom="20dp"
       android:background="@drawable/default_radius"
       android:backgroundTint="@color/blue_button"
       android:fontFamily="@font/comfortaa_bold"
@@ -109,6 +109,17 @@
       android:textAllCaps="false"
       android:textColor="@color/white"
       android:textSize="16sp" />
+
+    <TextView
+      android:id="@+id/link_sign_up"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/button_submit"
+      android:layout_centerHorizontal="true"
+      android:layout_marginBottom="50dp"
+      android:fontFamily="@font/comfortaa_regular"
+      android:text="@string/sign_in_activity_link_sign_up"
+      android:textSize="14sp" />
 
   </RelativeLayout>
 
