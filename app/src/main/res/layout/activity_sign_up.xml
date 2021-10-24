@@ -137,7 +137,7 @@
       android:textSize="16sp" />
 
     <TextView
-      android:id="@+id/link_sign_up"
+      android:id="@+id/link_back"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_below="@id/button_submit"

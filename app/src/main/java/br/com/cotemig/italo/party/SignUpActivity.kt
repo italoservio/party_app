@@ -13,7 +13,7 @@ class SignUpActivity : AppCompatActivity() {
   }
 
   private fun setupActivity() {
-    val backToLoginLink = findViewById<TextView>(R.id.link_sign_up)
+    val backToLoginLink = findViewById<TextView>(R.id.link_back)
     backToLoginLink.setOnClickListener() {
       val intent = Intent(this, SignInActivity::class.java)
       startActivity(intent)
