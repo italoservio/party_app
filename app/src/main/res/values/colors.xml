@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!-- Project colors -->
+  <color name="blue_light">#84B7DC</color>
+  <color name="blue_dark">#346F99</color>
+  <color name="blue_button">#0074B6</color>
+
+  <color name="brown_light">#F1C69E</color>
+  <color name="brown_dark">#BC814A</color>
+
+  <color name="green_light">#84DCB7</color>
+  <color name="green_dark">#3C8868</color>
+
+  <color name="red_light">#CA6B6B</color>
+
+  <color name="black">#FF000000</color>
+  <color name="white">#FFFFFFFF</color>
+  <color name="light_gray">#EDEDED</color>
+</resources>

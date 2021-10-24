@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/blue_light"
+  tools:context=".SignInActivity">
+
+  <TextView
+    android:id="@+id/title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/subtitle"
+    android:layout_centerHorizontal="true"
+    android:fontFamily="@font/comfortaa_bold"
+    android:text="Welcome"
+    android:textColor="@color/white"
+    android:textSize="40sp" />
+
+  <TextView
+    android:id="@+id/subtitle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/card"
+    android:layout_centerHorizontal="true"
+    android:fontFamily="@font/comfortaa_bold"
+    android:text="Please authenticate using \nthe below form:"
+    android:textAlignment="center"
+    android:textColor="@color/blue_dark" />
+
+  <RelativeLayout
+    android:id="@+id/card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginBottom="-10dp"
+    android:background="@drawable/default_radius">
+
+    <TextView
+      android:id="@+id/input_email_label"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignStart="@+id/input_email"
+      android:layout_marginTop="40dp"
+      android:fontFamily="@font/comfortaa_regular"
+      android:text="@string/sign_in_activity_email"
+      android:textColor="@color/black"
+      android:textSize="14sp" />
+
+    <EditText
+      android:id="@+id/input_email"
+      android:layout_width="match_parent"
+      android:layout_height="65dp"
+      android:layout_below="@+id/input_email_label"
+      android:layout_marginLeft="20dp"
+      android:layout_marginRight="20dp"
+      android:background="@drawable/input_blue_focus"
+      android:fontFamily="@font/comfortaa_regular"
+      android:paddingStart="12dp"
+      android:paddingEnd="12dp"
+      android:textCursorDrawable="@color/black"
+      android:singleLine="true" />
+
+    <TextView
+      android:id="@+id/input_password_label"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/input_email"
+      android:layout_alignStart="@+id/input_email"
+      android:layout_marginTop="15dp"
+      android:fontFamily="@font/comfortaa_regular"
+      android:text="@string/sign_in_activity_password"
+      android:textColor="@color/black"
+      android:textSize="14sp" />
+
+    <EditText
+      android:id="@+id/input_password"
+      android:layout_width="match_parent"
+      android:layout_height="65dp"
+      android:layout_below="@+id/input_password_label"
+      android:layout_marginLeft="20dp"
+      android:layout_marginRight="20dp"
+      android:background="@drawable/input_blue_focus"
+      android:fontFamily="@font/comfortaa_regular"
+      android:inputType="textPassword"
+      android:paddingStart="12dp"
+      android:paddingEnd="12dp"
+      android:textCursorDrawable="@color/black"
+      android:singleLine="true" />
+
+    <Button
+      android:id="@+id/button_submit"
+      android:layout_width="match_parent"
+      android:layout_height="65dp"
+      android:layout_below="@id/input_password"
+      android:layout_marginLeft="20dp"
+      android:layout_marginTop="15dp"
+      android:layout_marginRight="20dp"
+      android:layout_marginBottom="80dp"
+      android:background="@drawable/default_radius"
+      android:backgroundTint="@color/blue_button"
+      android:fontFamily="@font/comfortaa_bold"
+      android:letterSpacing="0"
+      android:text="@string/sign_in_activity_submit"
+      android:textAllCaps="false"
+      android:textColor="@color/white"
+      android:textSize="16sp" />
+
+  </RelativeLayout>
+
+</RelativeLayout>
