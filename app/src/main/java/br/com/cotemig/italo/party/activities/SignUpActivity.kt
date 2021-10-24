@@ -1,9 +1,10 @@
-package br.com.cotemig.italo.party
+package br.com.cotemig.italo.party.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import br.com.cotemig.italo.party.R
 
 class SignUpActivity : AppCompatActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
