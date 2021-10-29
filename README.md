@@ -10,13 +10,6 @@ Android native app using Kotlin to manage parties
 
 <br />
 
-<h3 align="center">⚠ Warning</h3>
-<p align="center">You can create expert systems on several things. <br />
-When creating elements, to use the same questions, you must save the system with an element that already has the question, and only then, when creating another element, the question will be available for import. <br />
-If you do not use the question import and register the same question twice, the system will not work as expected.</p>
-
-<br />
-
 <h3 align="center">😍 How to use</h3>
 <p align="center">The backend of this project can be founded here: <a href="https://github.com/ItaloServio/party_api">https://github.com/ItaloServio/party_api</a> </p>
 
