@@ -17,18 +17,22 @@ Android native app using Kotlin to manage parties
 
 <h3 align="center">📸 System prints</h3>
 <p align="center">See some system screens below</p>
-<h1 align="center">
-  <img width="400px" height="400px" src="https://i.imgur.com/U6TBIHA.png" alt="Login">
-</h1>
-<h1 align="center">
-  <img width="400px" height="400px" src="https://i.imgur.com/Cpp5XyN.png" alt="Home">
-</h1>
-<h1 align="center">
-  <img width="400px" height="400px" src="https://i.imgur.com/tCgcyMo.png" alt="Party">
-</h1>
-<h1 align="center">
-  <img width="400px" height="400px" src="https://i.imgur.com/nI1ySF8.png" alt="Invites">
-</h1>
+<table align="center">
+  <tr>
+    <td align="center">
+      <img width="150px" height="150px" src="https://i.imgur.com/U6TBIHA.png" alt="Login">
+    </td>
+    <td align="center">
+      <img width="150px" height="150px" src="https://i.imgur.com/Cpp5XyN.png" alt="Home">
+    </td>
+    <td align="center">
+      <img width="150px" height="150px" src="https://i.imgur.com/tCgcyMo.png" alt="Party">
+    </td>
+    <td align="center">
+      <img width="150px" height="150px" src="https://i.imgur.com/nI1ySF8.png" alt="Invites">
+    </td>
+  </tr>
+</table>
 
 <br />
 
