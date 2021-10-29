@@ -24,20 +24,18 @@ If you do not use the question import and register the same question twice, the 
 
 <h3 align="center">📸 System prints</h3>
 <p align="center">See some system screens below</p>
-<table>
-  <tr>
-    <td align="center"><img width="500px" height="500px" src="https://i.imgur.com/U6TBIHA.png" alt="Login"></td>		
-  </tr>
-  <tr>
-    <td align="center"><img width="500px" height="500px" src="https://i.imgur.com/Cpp5XyN.png" alt="Home"></td>		
-  </tr>
-  <tr>
-    <td align="center"><img width="500px" height="500px" src="https://i.imgur.com/tCgcyMo.png" alt="Party"></td>		
-  </tr>
-  <tr>
-    <td align="center"><img width="500px" height="500px" src="https://i.imgur.com/nI1ySF8.png" alt="Invites"></td>		
-  </tr>  
-</table>
+<h1 align="center">
+  <img width="400px" height="400px" src="https://i.imgur.com/U6TBIHA.png" alt="Login">
+</h1>
+<h1 align="center">
+  <img width="400px" height="400px" src="https://i.imgur.com/Cpp5XyN.png" alt="Home">
+</h1>
+<h1 align="center">
+  <img width="400px" height="400px" src="https://i.imgur.com/tCgcyMo.png" alt="Party">
+</h1>
+<h1 align="center">
+  <img width="400px" height="400px" src="https://i.imgur.com/nI1ySF8.png" alt="Invites">
+</h1>
 
 <br />
 
@@ -60,5 +58,6 @@ If you do not use the question import and register the same question twice, the 
           <b>Ítalo Sérvio</b>
         </sub>
       </a>
+    </td>
   </tr>  
 </table>
