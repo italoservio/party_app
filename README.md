@@ -26,16 +26,16 @@ If you do not use the question import and register the same question twice, the 
 <p align="center">See some system screens below</p>
 <table>
   <tr>
-    <td><img src="https://i.imgur.com/U6TBIHA.png" alt="Login"></td>		
+    <td align="center"><img width="500px" height="500px" src="https://i.imgur.com/U6TBIHA.png" alt="Login"></td>		
   </tr>
   <tr>
-    <td><img src="https://i.imgur.com/Cpp5XyN.png" alt="Home"></td>		
+    <td align="center"><img width="500px" height="500px" src="https://i.imgur.com/Cpp5XyN.png" alt="Home"></td>		
   </tr>
   <tr>
-    <td><img src="https://i.imgur.com/tCgcyMo.png" alt="Party"></td>		
+    <td align="center"><img width="500px" height="500px" src="https://i.imgur.com/tCgcyMo.png" alt="Party"></td>		
   </tr>
   <tr>
-    <td><img src="https://i.imgur.com/nI1ySF8.png" alt="Invites"></td>		
+    <td align="center"><img width="500px" height="500px" src="https://i.imgur.com/nI1ySF8.png" alt="Invites"></td>		
   </tr>  
 </table>
 
