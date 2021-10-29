@@ -17,6 +17,8 @@ Android native app using Kotlin to manage parties
 
 <h3 align="center">📸 System prints</h3>
 <p align="center">See some system screens below</p>
+<p align="center"><a href="https://www.figma.com/file/LPNB8sZc9cqkar1G7Ieqzk/Party-App?node-id=0%3A1">See Figma here</a></p>
+
 <table align="center">
   <tr>
     <td align="center">
