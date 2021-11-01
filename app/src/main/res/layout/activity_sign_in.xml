@@ -60,6 +60,7 @@
       android:layout_marginRight="20dp"
       android:background="@drawable/input_blue_focus"
       android:fontFamily="@font/comfortaa_regular"
+      android:inputType="textEmailAddress"
       android:paddingStart="12dp"
       android:paddingEnd="12dp"
       android:singleLine="true"
