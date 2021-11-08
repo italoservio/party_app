@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class RetrofitParty {
 
   private val retrofit = Retrofit.Builder()
-    .baseUrl("http://18.230.130.214")
+    .baseUrl("https://www.italoservio.com/party-api/")
     .addConverterFactory(GsonConverterFactory.create())
     .build()
 

@@ -7,10 +7,10 @@ import retrofit2.http.POST
 
 interface ServiceUser {
 
-  @POST("/user/authenticate")
+  @POST("user/authenticate")
   fun authenticate(@Body user: User): Call<User>
 
-  @POST("/user")
+  @POST("user")
   fun create(@Body user: User): Call<Void>
 
 }
