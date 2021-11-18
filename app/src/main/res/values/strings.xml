@@ -1,19 +1,40 @@
 <resources>
-  <string name="app_name">party</string>
+    <string name="app_name">party</string>
 
-  <string name="sign_in_activity_submit">Submit</string>
-  <string name="sign_in_activity_password">Password</string>
-  <string name="sign_in_activity_email">E-mail</string>
-  <string name="sign_in_activity_title">Welcome</string>
-  <string name="sign_in_activity_subtitle">Please authenticate using \nthe below form:</string>
-  <string name="sign_in_activity_link_sign_up"><u>Sign Up</u></string>
+    <string name="sign_in_activity_submit">Submit</string>
+    <string name="sign_in_activity_password">Password</string>
+    <string name="sign_in_activity_email">E-mail</string>
+    <string name="sign_in_activity_title">Welcome</string>
+    <string name="sign_in_activity_subtitle">Please authenticate using \nthe below form:</string>
+    <string name="sign_in_activity_link_sign_up"><u>Sign Up</u></string>
 
-  <string name="sign_up_activity_title">Account\nCreation</string>
-  <string name="sign_up_activity_subtitle">Please, fill in the fields \nto register</string>
-  <string name="sign_up_activity_name">Name</string>
-  <string name="sign_up_activity_email">E-mail</string>
-  <string name="sign_up_activity_password">Password</string>
-  <string name="sign_up_activity_back_to_login"><u>Back to login</u></string>
-  <string name="sign_up_activity_submit">Submit</string>
+    <string name="sign_up_activity_title">Account\nCreation</string>
+    <string name="sign_up_activity_subtitle">Please, fill in the fields \nto register</string>
+    <string name="sign_up_activity_name">Name</string>
+    <string name="sign_up_activity_email">E-mail</string>
+    <string name="sign_up_activity_password">Password</string>
+    <string name="sign_up_activity_back_to_login"><u>Back to login</u></string>
+    <string name="sign_up_activity_submit">Submit</string>
+
+
+    // main activity strings
+    <string name="main_activity_title">My Parties</string>
+    <string name="main_activity_subtitle">See and manage all your \nparties on the list below:</string>
+
+
+    // main activity detail strings
+    <string name="main_activity_detail_title_new">New Party</string>
+    <string name="main_activity_detail_title_manage">Party</string>
+    <string name="main_activity_detail_subtitle_new">Create a party:</string>
+    <string name="main_activity_detail_subtitle_manage">Manage a party:</string>
+
+    <string name="main_activity_detail_party_name">Party name</string>
+    <string name="main_activity_detail_max_members">Max. members</string>
+    <string name="main_activity_detail_max_cost">Max. cost</string>
+    <string name="main_activity_detail_location">Location</string>
+    <string name="main_activity_detail_button_invite_member">Invite member</string>
+    <string name="main_activity_detail_button_add_cost">Add cost</string>
+    <string name="main_activity_detail_button_submit">Submit</string>
+    <string name="main_activity_detail_button_back">Back</string>
 
 </resources>
