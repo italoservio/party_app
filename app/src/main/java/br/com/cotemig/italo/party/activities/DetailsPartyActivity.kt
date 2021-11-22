@@ -17,8 +17,6 @@ import br.com.cotemig.italo.party.services.RetrofitParty
 import retrofit2.Call
 import retrofit2.Response
 
-
-
 class DetailsPartyActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,22 +36,21 @@ class DetailsPartyActivity : AppCompatActivity() {
         val addCost = findViewById<Button>(R.id.button_add_cost)
 
         addCost.setOnClickListener() {
-            /**
-                val intent = Intent(this, AddCostActivity::class.java)
+
+                val intent = Intent(this, CostsActivity::class.java)
                 intent.putExtra("party", party)
                 intent.putExtra("user", user)
                 startActivity(intent)
-            **/
         }
 
         val inviteMember = findViewById<Button>(R.id.button_invite_member)
         inviteMember.setOnClickListener() {
-            /**
-                val intent = Intent(this, InviteMemberActivity::class.java)
+
+                val intent = Intent(this, MembersActivity::class.java)
                 intent.putExtra("party", party)
                 intent.putExtra("user", user)
                 startActivity(intent)
-            **/
+
         }
 
         val submit = findViewById<Button>(R.id.button_submit)
@@ -77,14 +74,18 @@ class DetailsPartyActivity : AppCompatActivity() {
         back.visibility = View.VISIBLE
         var submit = findViewById<Button>(R.id.button_submit)
         submit.visibility = View.GONE
-        var partyName = findViewById<TextView>(R.id.input_party_name)
-        partyName.text = party.name
-        var location = findViewById<TextView>(R.id.input_location)
-        location.text = party.location
+        var partyName = findViewById<EditText>(R.id.input_party_name)
+        partyName.setText(party.name)
+        partyName.setEnabled(false)
+        var location = findViewById<EditText>(R.id.input_location)
+        location.setText(party.location)
+        location.setEnabled(false)
         var maxMembers = findViewById<EditText>(R.id.input_max_members)
         maxMembers.setText(party.max_members.toString())
+        maxMembers.setEnabled(false)
         var maxCost= findViewById<EditText>(R.id.input_max_cost)
         maxCost.setText(party.max_cost.toString())
+        maxCost.setEnabled(false)
     }
 
     private fun createParty(user : User?){
@@ -99,7 +100,7 @@ class DetailsPartyActivity : AppCompatActivity() {
         party.max_members = maxmembers.text.toString().toInt()
         party.max_cost = maxcost.text.toString().toFloat()
 
-        val service = RetrofitParty().serviceUser()
+        val service = RetrofitParty().serviceParty()
         Log.i("party", party.max_members.toString())
         Log.i("user", user?.token.toString())
         val call = service.createParty(party, user?.token.toString())

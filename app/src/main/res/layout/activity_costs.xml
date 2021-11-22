@@ -38,7 +38,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="-10dp"
+        android:layout_marginBottom="-8dp"
         android:background="@drawable/default_radius">
 
         <TextView
@@ -90,10 +90,11 @@
             android:paddingStart="12dp"
             android:paddingEnd="12dp"
             android:singleLine="true"
-            android:textCursorDrawable="@color/black" />
+            android:textCursorDrawable="@color/black"
+            android:inputType="number"  />
 
         <Button
-            android:id="@+id/button_invite"
+            android:id="@+id/button_cost"
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:layout_below="@+id/input_price"
@@ -111,7 +112,7 @@
             android:id="@+id/separator"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_below="@id/button_invite"
+            android:layout_below="@id/button_cost"
             android:layout_marginHorizontal="25dp"
             android:layout_marginVertical="20dp"
             android:background="@color/light_gray" />

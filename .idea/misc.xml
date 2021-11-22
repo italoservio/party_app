@@ -11,6 +11,7 @@
         <entry key="..\:/Programs/AndroidStudioProjects/party/app/src/main/res/layout/activity_main.xml" value="0.3875" />
         <entry key="..\:/Programs/AndroidStudioProjects/party/app/src/main/res/layout/activity_sign_in.xml" value="0.33" />
         <entry key="..\:/Programs/AndroidStudioProjects/party/app/src/main/res/layout/activity_sign_up.xml" value="0.3875" />
+        <entry key="..\:/party_app-features-000-list-parties/app/src/main/res/drawable-v24/button_bordered_green.xml" value="0.2864583333333333" />
         <entry key="..\:/party_app-features-000-list-parties/app/src/main/res/drawable/button_bordered_brown.xml" value="0.3828125" />
         <entry key="..\:/party_app-features-000-list-parties/app/src/main/res/drawable/button_filled_brown.xml" value="0.3828125" />
         <entry key="..\:/party_app-features-000-list-parties/app/src/main/res/drawable/default_radius.xml" value="0.3828125" />
@@ -19,6 +20,8 @@
         <entry key="..\:/party_app-features-000-list-parties/app/src/main/res/drawable/ic_icon.xml" value="0.3828125" />
         <entry key="..\:/party_app-features-000-list-parties/app/src/main/res/drawable/ic_icon_1.xml" value="0.3828125" />
         <entry key="..\:/party_app-features-000-list-parties/app/src/main/res/drawable/ic_icon_2.xml" value="0.3828125" />
+        <entry key="..\:/party_app-features-000-list-parties/app/src/main/res/drawable/input_blue_focus.xml" value="0.3828125" />
+        <entry key="..\:/party_app-features-000-list-parties/app/src/main/res/drawable/input_brown_focus.xml" value="0.3828125" />
         <entry key="..\:/party_app-features-000-list-parties/app/src/main/res/layout/activity_costs.xml" value="0.36666666666666664" />
         <entry key="..\:/party_app-features-000-list-parties/app/src/main/res/layout/activity_costs_list_item.xml" value="0.35260416666666666" />
         <entry key="..\:/party_app-features-000-list-parties/app/src/main/res/layout/activity_details_party.xml" value="0.36666666666666664" />
@@ -28,7 +31,7 @@
         <entry key="..\:/party_app-features-000-list-parties/app/src/main/res/layout/activity_members.xml" value="0.36666666666666664" />
         <entry key="..\:/party_app-features-000-list-parties/app/src/main/res/layout/activity_members_list_item.xml" value="0.35260416666666666" />
         <entry key="..\:/party_app-features-000-list-parties/app/src/main/res/layout/activity_membrers.xml" value="0.36666666666666664" />
-        <entry key="..\:/party_app-features-000-list-parties/app/src/main/res/layout/activity_my_invites.xml" value="0.36666666666666664" />
+        <entry key="..\:/party_app-features-000-list-parties/app/src/main/res/layout/activity_my_invites.xml" value="0.31344116006692696" />
         <entry key="..\:/party_app-features-000-list-parties/app/src/main/res/layout/activity_my_invites_list_item.xml" value="0.35260416666666666" />
         <entry key="..\:/party_app-features-000-list-parties/app/src/main/res/layout/activity_sign_in.xml" value="0.36666666666666664" />
         <entry key="..\:/party_app-features-000-list-parties/app/src/main/res/layout/activity_sign_up.xml" value="0.36666666666666664" />

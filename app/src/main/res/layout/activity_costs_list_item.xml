@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginBottom="10dp">
 
     <LinearLayout
-        android:id="@+id/party_people"
+        android:id="@+id/party_cost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp">
@@ -16,7 +17,7 @@
             android:src="@drawable/ic_icon"></ImageView>
 
         <TextView
-            android:id="@+id/party_people_amount"
+            android:id="@+id/cost_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
@@ -26,4 +27,4 @@
             android:textStyle="bold"></TextView>
 
     </LinearLayout>
-</ScrollView>
+</RelativeLayout>

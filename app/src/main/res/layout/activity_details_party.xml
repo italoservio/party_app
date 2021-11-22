@@ -98,7 +98,8 @@
                     android:paddingStart="12dp"
                     android:paddingEnd="12dp"
                     android:singleLine="true"
-                    android:textCursorDrawable="@color/black" />
+                    android:textCursorDrawable="@color/black"
+                    android:inputType="number"/>
 
 
             </RelativeLayout>
@@ -129,7 +130,8 @@
                     android:paddingStart="12dp"
                     android:paddingEnd="12dp"
                     android:singleLine="true"
-                    android:textCursorDrawable="@color/black" />
+                    android:textCursorDrawable="@color/black"
+                    android:inputType="number"/>
 
             </RelativeLayout>
         </RelativeLayout>

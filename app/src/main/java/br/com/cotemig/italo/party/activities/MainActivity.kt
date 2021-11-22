@@ -39,6 +39,11 @@ class MainActivity : AppCompatActivity() {
       intent.putExtra("user", user)
       startActivity(intent)
     }
+      bellfab.setOnClickListener{
+      val intent = Intent(this, MyInvitesActivity::class.java)
+      intent.putExtra("user", user)
+      startActivity(intent)
+    }
 
     loadParties(user);
   }
@@ -76,8 +81,8 @@ class MainActivity : AppCompatActivity() {
 
 
   private fun loadParties(user : User){
-    val service = RetrofitParty().serviceUser()
-    val call = service.list(user.token)
+    val service = RetrofitParty().serviceParty()
+    val call = service.listParty(user.token)
 
     call.enqueue(object: retrofit2.Callback<List<Party>> {
       override fun onResponse(call: Call<List<Party>>, response: Response<List<Party>>) {
