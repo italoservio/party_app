@@ -44,7 +44,7 @@ class SignInActivity : AppCompatActivity() {
     val service = RetrofitParty().serviceUser()
     val call = service.authenticate(user)
 
-    call.enqueue(object: retrofit2.Callback<User> {
+    call.enqueue(object : retrofit2.Callback<User> {
       override fun onResponse(call: Call<User>, response: Response<User>) {
         if (response.code() == 200) {
           response.body()?.let { body ->

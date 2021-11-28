@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/card"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_marginBottom="10dp"
+  android:background="@drawable/default_radius">
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp">
+
+    <TextView
+      android:id="@+id/party_name"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:fontFamily="@font/comfortaa_bold"
+      android:textAllCaps="false"
+      android:textColor="@color/black"
+      android:textSize="17sp"
+      android:textStyle="bold" />
+
+    <View
+      android:id="@+id/separator"
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:layout_below="@id/party_name"
+      android:layout_marginVertical="10dp"
+      android:background="@color/light_gray" />
+
+    <TextView
+      android:id="@+id/text_status"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/separator"
+      android:fontFamily="@font/comfortaa_bold"
+      android:visibility="gone"
+      android:textSize="14sp" />
+
+    <RelativeLayout
+      android:id="@+id/invite_button"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/text_status">
+
+      <Button
+        android:id="@+id/button_deny"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:width="150dp"
+        android:background="@drawable/button_bordered_green"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/my_invites_item_deny"
+        android:textAllCaps="false"
+        android:textColor="@color/green_dark"
+        android:textSize="16sp" />
+
+      <Button
+        android:id="@+id/button_accept"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:width="150dp"
+        android:background="@drawable/default_radius"
+        android:backgroundTint="@color/green_dark"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/my_invites_item_accept"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+    </RelativeLayout>
+  </RelativeLayout>
+
+</RelativeLayout>

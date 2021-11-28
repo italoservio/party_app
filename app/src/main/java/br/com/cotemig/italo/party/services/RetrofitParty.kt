@@ -14,4 +14,8 @@ class RetrofitParty {
     return this.retrofit.create(ServiceUser::class.java)
   }
 
+  fun serviceParty(): ServiceParty {
+    return this.retrofit.create(ServiceParty::class.java)
+  }
+
 }

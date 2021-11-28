@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/brown_light"
+  android:orientation="vertical"
+  tools:context=".activities.MainActivity">
+
+  <TextView
+    android:id="@+id/title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/subtitle"
+    android:layout_centerHorizontal="true"
+    android:fontFamily="@font/comfortaa_bold"
+    android:text="@string/main_activity_detail_title_new"
+    android:textColor="@color/white"
+    android:textSize="36sp" />
+
+  <TextView
+    android:id="@+id/subtitle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/card"
+    android:layout_centerHorizontal="true"
+    android:fontFamily="@font/comfortaa_bold"
+    android:text="@string/main_activity_detail_subtitle_new"
+    android:textAlignment="center"
+    android:textColor="@color/brown_dark" />
+
+  <RelativeLayout
+    android:id="@+id/card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginBottom="-10dp"
+    android:background="@drawable/default_radius">
+
+    <TextView
+      android:id="@+id/party_name_label"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignStart="@+id/input_party_name"
+      android:layout_marginTop="20dp"
+      android:fontFamily="@font/comfortaa_regular"
+      android:text="@string/main_activity_detail_party_name"
+      android:textColor="@color/black"
+      android:textSize="14sp" />
+
+    <EditText
+      android:id="@+id/input_party_name"
+      android:layout_width="match_parent"
+      android:layout_height="65dp"
+      android:layout_below="@+id/party_name_label"
+      android:layout_marginLeft="20dp"
+      android:layout_marginRight="20dp"
+      android:background="@drawable/input_brown_focus"
+      android:fontFamily="@font/comfortaa_regular"
+      android:paddingStart="12dp"
+      android:paddingEnd="12dp"
+      android:singleLine="true"
+      android:textCursorDrawable="@color/black" />
+
+    <RelativeLayout
+      android:id="@+id/max_div"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/input_party_name"
+      android:layout_marginTop="20dp">
+
+      <RelativeLayout
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginHorizontal="20dp">
+
+        <TextView
+          android:id="@+id/max_members_label"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:fontFamily="@font/comfortaa_regular"
+          android:text="@string/main_activity_detail_max_members"
+          android:textColor="@color/black"
+          android:textSize="14sp" />
+
+        <EditText
+          android:id="@+id/input_max_members"
+          android:layout_width="match_parent"
+          android:layout_height="65dp"
+          android:layout_below="@+id/max_members_label"
+          android:background="@drawable/input_brown_focus"
+          android:fontFamily="@font/comfortaa_regular"
+          android:inputType="number"
+          android:paddingStart="12dp"
+          android:paddingEnd="12dp"
+          android:singleLine="true"
+          android:textCursorDrawable="@color/black" />
+
+      </RelativeLayout>
+
+      <RelativeLayout
+        android:id="@+id/max_cost_div"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="20dp">
+
+        <TextView
+          android:id="@+id/max_cost_label"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:fontFamily="@font/comfortaa_regular"
+          android:text="@string/main_activity_detail_max_cost"
+          android:textColor="@color/black"
+          android:textSize="14sp" />
+
+        <EditText
+          android:id="@+id/input_max_cost"
+          android:layout_width="match_parent"
+          android:layout_height="65dp"
+          android:layout_below="@+id/max_cost_label"
+          android:background="@drawable/input_brown_focus"
+          android:fontFamily="@font/comfortaa_regular"
+          android:inputType="number"
+          android:paddingStart="12dp"
+          android:paddingEnd="12dp"
+          android:singleLine="true"
+          android:textCursorDrawable="@color/black" />
+
+      </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+      android:id="@+id/location_label"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/max_div"
+      android:layout_alignStart="@+id/input_location"
+      android:layout_marginTop="20dp"
+      android:fontFamily="@font/comfortaa_regular"
+      android:text="@string/main_activity_detail_location"
+      android:textColor="@color/black"
+      android:textSize="14sp" />
+
+    <EditText
+      android:id="@+id/input_location"
+      android:layout_width="match_parent"
+      android:layout_height="65dp"
+      android:layout_below="@+id/location_label"
+      android:layout_marginLeft="20dp"
+      android:layout_marginRight="20dp"
+      android:background="@drawable/input_brown_focus"
+      android:fontFamily="@font/comfortaa_regular"
+      android:paddingStart="12dp"
+      android:paddingEnd="12dp"
+      android:singleLine="true"
+      android:textCursorDrawable="@color/black" />
+
+    <Button
+      android:id="@+id/button_invite_member"
+      android:layout_width="match_parent"
+      android:layout_height="65dp"
+      android:layout_below="@id/input_location"
+      android:layout_marginHorizontal="20dp"
+      android:layout_marginTop="20dp"
+      android:background="@drawable/button_bordered_brown"
+      android:fontFamily="@font/comfortaa_bold"
+      android:letterSpacing="0"
+      android:text="@string/main_activity_detail_button_invite_member"
+      android:textAllCaps="false"
+      android:textColor="@color/brown_dark"
+      android:textSize="16sp"
+      android:visibility="gone" />
+
+    <Button
+      android:id="@+id/button_add_cost"
+      android:layout_width="match_parent"
+      android:layout_height="65dp"
+      android:layout_below="@id/button_invite_member"
+      android:layout_marginHorizontal="20dp"
+      android:layout_marginTop="20dp"
+      android:background="@drawable/button_bordered_brown"
+      android:fontFamily="@font/comfortaa_bold"
+      android:letterSpacing="0"
+      android:text="@string/main_activity_detail_button_add_cost"
+      android:textAllCaps="false"
+      android:textColor="@color/brown_dark"
+      android:textSize="16sp"
+      android:visibility="gone" />
+
+
+    <View
+      android:id="@+id/separator"
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:layout_below="@id/button_add_cost"
+      android:layout_marginHorizontal="25dp"
+      android:layout_marginVertical="20dp"
+      android:background="@color/light_gray" />
+
+    <Button
+      android:id="@+id/button_submit"
+      android:layout_width="match_parent"
+      android:layout_height="65dp"
+      android:layout_below="@id/separator"
+      android:layout_marginHorizontal="20dp"
+      android:layout_marginBottom="50dp"
+      android:background="@drawable/button_filled_brown"
+      android:fontFamily="@font/comfortaa_bold"
+      android:letterSpacing="0"
+      android:text="@string/main_activity_detail_button_submit"
+      android:textAllCaps="false"
+      android:textColor="@color/white"
+      android:textSize="16sp" />
+
+    <Button
+      android:id="@+id/button_back"
+      android:layout_width="match_parent"
+      android:layout_height="65dp"
+      android:layout_below="@id/button_submit"
+      android:layout_marginHorizontal="20dp"
+      android:layout_marginBottom="50dp"
+      android:background="@drawable/button_filled_brown"
+      android:fontFamily="@font/comfortaa_bold"
+      android:letterSpacing="0"
+      android:text="@string/main_activity_detail_button_back"
+      android:textAllCaps="false"
+      android:textColor="@color/white"
+      android:textSize="16sp"
+      android:visibility="gone" />
+
+  </RelativeLayout>
+
+
+</RelativeLayout>
