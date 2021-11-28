@@ -58,5 +58,23 @@ Android native app using Kotlin to manage parties
         </sub>
       </a>
     </td>
+    <td align="center">
+      <a href="https://github.com/TallysWiterF">
+        <img src="https://avatars.githubusercontent.com/u/63269777?v=4" width="100px;" alt="Profile"/>
+        <br />
+        <sub>
+          <b>Tallys Witer</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/caiopolito">
+        <img src="https://avatars.githubusercontent.com/u/49927897?v=4" width="100px;" alt="Profile"/>
+        <br />
+        <sub>
+          <b>Caio Polito</b>
+        </sub>
+      </a>
+    </td>
   </tr>  
 </table>
