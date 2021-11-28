@@ -84,6 +84,11 @@ class MyInvitesActivity : AppCompatActivity() {
       override fun onResponse(call: Call<Void>, response: Response<Void>) {
         if (response.code() == 200) {
           response.body()?.let {
+            Toast.makeText(
+              this@MyInvitesActivity,
+              "Aceito com sucesso! Recarregando...",
+              Toast.LENGTH_LONG
+            ).show()
             loadInvitedParties(user)
           }
         } else {
@@ -117,6 +122,11 @@ class MyInvitesActivity : AppCompatActivity() {
       override fun onResponse(call: Call<Void>, response: Response<Void>) {
         if (response.code() == 200) {
           response.body()?.let {
+            Toast.makeText(
+              this@MyInvitesActivity,
+              "Recusado com sucesso! Recarregando...",
+              Toast.LENGTH_LONG
+            ).show()
             loadInvitedParties(user)
           }
         } else {

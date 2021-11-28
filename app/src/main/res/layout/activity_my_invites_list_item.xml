@@ -16,7 +16,6 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:fontFamily="@font/comfortaa_bold"
-      android:text="Festa 1"
       android:textAllCaps="false"
       android:textColor="@color/black"
       android:textSize="17sp"
@@ -36,7 +35,7 @@
       android:layout_height="wrap_content"
       android:layout_below="@id/separator"
       android:fontFamily="@font/comfortaa_bold"
-      android:text="Accepted"
+      android:visibility="gone"
       android:textSize="14sp" />
 
     <RelativeLayout

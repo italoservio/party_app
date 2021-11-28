@@ -51,7 +51,12 @@ class PartyAdapter(
       }
 
       var costAmount = view.findViewById<TextView>(R.id.party_cost_amount)
-      costAmount.text = party.total_cost.toString() + "/" + party.max_cost.toString()
+
+      var actualCost = party.total_cost
+      if (party.total_cost == null) {
+        actualCost = 0.toFloat();
+      }
+      costAmount.text = actualCost.toString() + "/" + party.max_cost.toString()
       party.max_cost?.let { max_cost ->
         party.total_cost?.let { it ->
           if (compareValues(max_cost, it) < 0) {

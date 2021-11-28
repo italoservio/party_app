@@ -50,7 +50,8 @@ class MyInvitesAdapter(
       button_deny.setOnClickListener { onClickDeny(party) }
 
       if (party.accepted == 1) {
-        text_status.text = context.getString(R.string.my_invites_adapter_accepted)
+        text_status.text = context.getString(R.string.my_invites_adapter_accepted);
+        text_status.visibility = View.VISIBLE;
         button_accept.setVisibility(View.GONE)
         button_deny.setVisibility(View.GONE)
       }
