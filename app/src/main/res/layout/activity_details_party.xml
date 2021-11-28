@@ -59,7 +59,7 @@
       android:layout_below="@+id/party_name_label"
       android:layout_marginLeft="20dp"
       android:layout_marginRight="20dp"
-      android:background="@drawable/input_blue_focus"
+      android:background="@drawable/input_brown_focus"
       android:fontFamily="@font/comfortaa_regular"
       android:paddingStart="12dp"
       android:paddingEnd="12dp"
@@ -74,9 +74,9 @@
       android:layout_marginTop="20dp">
 
       <RelativeLayout
-        android:layout_width="120dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_marginHorizontal="20dp">
 
         <TextView
@@ -93,7 +93,7 @@
           android:layout_width="match_parent"
           android:layout_height="65dp"
           android:layout_below="@+id/max_members_label"
-          android:background="@drawable/input_blue_focus"
+          android:background="@drawable/input_brown_focus"
           android:fontFamily="@font/comfortaa_regular"
           android:inputType="number"
           android:paddingStart="12dp"
@@ -105,9 +105,9 @@
 
       <RelativeLayout
         android:id="@+id/max_cost_div"
-        android:layout_width="120dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_marginHorizontal="20dp">
 
         <TextView
@@ -124,7 +124,7 @@
           android:layout_width="match_parent"
           android:layout_height="65dp"
           android:layout_below="@+id/max_cost_label"
-          android:background="@drawable/input_blue_focus"
+          android:background="@drawable/input_brown_focus"
           android:fontFamily="@font/comfortaa_regular"
           android:inputType="number"
           android:paddingStart="12dp"
@@ -154,7 +154,7 @@
       android:layout_below="@+id/location_label"
       android:layout_marginLeft="20dp"
       android:layout_marginRight="20dp"
-      android:background="@drawable/input_blue_focus"
+      android:background="@drawable/input_brown_focus"
       android:fontFamily="@font/comfortaa_regular"
       android:paddingStart="12dp"
       android:paddingEnd="12dp"

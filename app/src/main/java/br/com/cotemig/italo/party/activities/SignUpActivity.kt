@@ -47,7 +47,7 @@ class SignUpActivity : AppCompatActivity() {
     val service = RetrofitParty().serviceUser()
     val call = service.create(user)
 
-    call.enqueue(object: retrofit2.Callback<Void> {
+    call.enqueue(object : retrofit2.Callback<Void> {
       override fun onResponse(call: Call<Void>, response: Response<Void>) {
         if (response.code() == 201) {
           Toast.makeText(

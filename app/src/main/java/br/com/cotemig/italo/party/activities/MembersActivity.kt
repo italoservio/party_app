@@ -18,27 +18,27 @@ import retrofit2.Call
 import retrofit2.Response
 
 class MembersActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_members)
+  override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    setContentView(R.layout.activity_members)
 
-        val party = intent.getSerializableExtra("party") as Party
-        val user = intent.getSerializableExtra("user") as User
+    val party = intent.getSerializableExtra("party") as Party
+    val user = intent.getSerializableExtra("user") as User
 
-        setupActivity(user, party)
+    setupActivity(user, party)
+  }
+
+  private fun setupActivity(user: User, party: Party) {
+    loadMembersParties(user, party)
+
+    val inviteButton = findViewById<Button>(R.id.button_invite)
+
+    inviteButton.setOnClickListener() {
+      inviteMember(user, party)
     }
+  }
 
-    private fun setupActivity(user: User, party: Party) {
-        loadMembersParties(user, party)
-
-        val inviteButton = findViewById<Button>(R.id.button_invite)
-
-        inviteButton.setOnClickListener() {
-            inviteCosts(user, party)
-        }
-    }
-
-private fun inviteCosts(user : User, party: Party){
+  private fun inviteMember(user: User, party: Party) {
     var emailText = findViewById<EditText>(R.id.input_member)
     var invite = Invite()
     invite.email = emailText.text.toString()
@@ -47,65 +47,75 @@ private fun inviteCosts(user : User, party: Party){
     val service = RetrofitParty().serviceParty()
     val call = service.createInvite(invite, user.token)
     call.enqueue(object : retrofit2.Callback<Void> {
-        override fun onResponse(call: Call<Void>, response: Response<Void>) {
-            if (response.code() == 201) {
-                val intent = Intent(this@MembersActivity, MainActivity::class.java)
-                intent.putExtra("user", user)
-                startActivity(intent)
-            } else {
-                Toast.makeText(
-                    this@MembersActivity,
-                    "Não foi possível adicionar o membro a festa.",
-                    Toast.LENGTH_LONG
-                ).show()
-            }
+      override fun onResponse(call: Call<Void>, response: Response<Void>) {
+        if (response.code() == 201) {
+          Toast.makeText(
+            this@MembersActivity,
+            "Membro convidado com sucesso",
+            Toast.LENGTH_LONG
+          ).show()
+          val intent = Intent(this@MembersActivity, MainActivity::class.java)
+          intent.putExtra("user", user)
+          startActivity(intent)
+          finish()
+        } else {
+          Toast.makeText(
+            this@MembersActivity,
+            "Não foi possível adicionar o membro a festa.",
+            Toast.LENGTH_LONG
+          ).show()
         }
+      }
 
-        override fun onFailure(call: Call<Void>, t: Throwable) {
-            Toast.makeText(
-                this@MembersActivity,
-                "Um erro inesperado ocorreu",
-                Toast.LENGTH_LONG
-            ).show()
-        }
+      override fun onFailure(call: Call<Void>, t: Throwable) {
+        Toast.makeText(
+          this@MembersActivity,
+          "Um erro inesperado ocorreu",
+          Toast.LENGTH_LONG
+        ).show()
+      }
     })
-}
+  }
 
-    private fun loadMembersParties(user: User, party: Party) {
-        val service = RetrofitParty().serviceParty()
-        val call = service.getById(party.id, user.token)
+  private fun loadMembersParties(user: User, party: Party) {
+    val service = RetrofitParty().serviceParty()
+    val call = service.getById(party.id, user.token)
 
-        call.enqueue(object : retrofit2.Callback<Party> {
-            override fun onResponse(call: Call<Party>, response: Response<Party>) {
-                if (response.code() == 200) {
-                    response.body()?.let { body ->
-                        fillMembers(body)
-                    }
-                } else {
-                    Toast.makeText(
-                        this@MembersActivity,
-                        "Não foi possível listar os membros da festa.",
-                        Toast.LENGTH_LONG
-                    ).show()
-                }
-            }
+    call.enqueue(object : retrofit2.Callback<Party> {
+      override fun onResponse(call: Call<Party>, response: Response<Party>) {
+        if (response.code() == 200) {
+          response.body()?.let { body ->
+            fillMembers(body)
+          }
+        } else {
+          Toast.makeText(
+            this@MembersActivity,
+            "Não foi possível listar os membros da festa.",
+            Toast.LENGTH_LONG
+          ).show()
+        }
+      }
 
-            override fun onFailure(call: Call<Party>, t: Throwable) {
-                Toast.makeText(
-                    this@MembersActivity,
-                    "Um erro inesperado ocorreu",
-                    Toast.LENGTH_LONG
-                ).show()
-            }
-        })
-    }
+      override fun onFailure(call: Call<Party>, t: Throwable) {
+        Toast.makeText(
+          this@MembersActivity,
+          "Um erro inesperado ocorreu",
+          Toast.LENGTH_LONG
+        ).show()
+      }
+    })
+  }
 
-    private fun fillMembers(party: Party) {
-        val list = findViewById<RecyclerView>(R.id.list)
-        list.adapter = MembersAdapter(this, party.members!!)
+  private fun fillMembers(party: Party) {
+    val list = findViewById<RecyclerView>(R.id.list)
+    list.adapter = MembersAdapter(this, party.members!!)
 
-        list.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-    }
+    list.layoutManager = LinearLayoutManager(
+      this,
+      LinearLayoutManager.VERTICAL,
+      false
+    )
+  }
 
 
 }

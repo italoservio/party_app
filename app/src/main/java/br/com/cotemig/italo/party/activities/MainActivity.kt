@@ -38,11 +38,13 @@ class MainActivity : AppCompatActivity() {
       val intent = Intent(this, DetailsPartyActivity::class.java)
       intent.putExtra("user", user)
       startActivity(intent)
+      finish()
     }
     bellfab.setOnClickListener {
       val intent = Intent(this, MyInvitesActivity::class.java)
       intent.putExtra("user", user)
       startActivity(intent)
+      finish()
     }
 
     loadParties(user);
@@ -94,7 +96,6 @@ class MainActivity : AppCompatActivity() {
     }
   }
 
-
   private fun loadParties(user: User) {
     val service = RetrofitParty().serviceParty()
     val call = service.listParty(user.token)
@@ -131,6 +132,7 @@ class MainActivity : AppCompatActivity() {
       intent.putExtra("party", party)
       intent.putExtra("user", user)
       startActivity(intent)
+      finish()
     }
 
     list.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)

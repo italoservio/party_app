@@ -13,42 +13,53 @@ import br.com.cotemig.italo.party.R
 import br.com.cotemig.italo.party.models.Members
 import br.com.cotemig.italo.party.models.Party
 
-class MyInvitesAdapter (var context: Context, var list : List<Party>, var onClickAccept: (Party) -> Unit, var onClickDeny: (Party) -> Unit) : RecyclerView.Adapter<MyInvitesAdapter.invitesHolder>() {
-        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyInvitesAdapter.invitesHolder {
-            var view = LayoutInflater.from(context).inflate(R.layout.activity_my_invites_list_item, parent, false)
-            return invitesHolder(view)
-        }
+class MyInvitesAdapter(
+  var context: Context,
+  var list: List<Party>,
+  var onClickAccept: (Party) -> Unit,
+  var onClickDeny: (Party) -> Unit
+) : RecyclerView.Adapter<MyInvitesAdapter.invitesHolder>() {
+  override fun onCreateViewHolder(
+    parent: ViewGroup,
+    viewType: Int
+  ): MyInvitesAdapter.invitesHolder {
+    var view =
+      LayoutInflater.from(context).inflate(R.layout.activity_my_invites_list_item, parent, false)
+    return invitesHolder(view, context)
+  }
 
-        override fun onBindViewHolder(holder: MyInvitesAdapter.invitesHolder, position: Int) {
-            holder.bind(list[position], onClickAccept, onClickDeny )
-        }
+  override fun onBindViewHolder(holder: MyInvitesAdapter.invitesHolder, position: Int) {
+    holder.bind(list[position], onClickAccept, onClickDeny)
+  }
 
-        override fun getItemCount(): Int {
-            return list.size
-        }
+  override fun getItemCount(): Int {
+    return list.size
+  }
 
-        class invitesHolder(var view : View)  : RecyclerView.ViewHolder(view){
-            fun bind (party : Party, onClickAccept: (Party) -> Unit, onClickDeny: (Party) -> Unit){
+  class invitesHolder(var view: View, var context: Context) : RecyclerView.ViewHolder(view) {
+    fun bind(party: Party, onClickAccept: (Party) -> Unit, onClickDeny: (Party) -> Unit) {
 
-                var button_accept = view.findViewById<Button>(R.id.button_accept)
-                var button_deny = view.findViewById<Button>(R.id.button_deny)
-                var card = view.findViewById<RelativeLayout>(R.id.card)
-                var partyName = view.findViewById<TextView>(R.id.party_name)
-                partyName.text = party.name
+      val button_accept = view.findViewById<Button>(R.id.button_accept)
+      val button_deny = view.findViewById<Button>(R.id.button_deny)
+      val text_status = view.findViewById<TextView>(R.id.text_status)
+      val card = view.findViewById<RelativeLayout>(R.id.card)
+      val partyName = view.findViewById<TextView>(R.id.party_name)
+      partyName.text = party.name
 
-                button_accept.setOnClickListener { onClickAccept(party) }
-                button_deny.setOnClickListener { onClickDeny(party) }
+      button_accept.setOnClickListener { onClickAccept(party) }
+      button_deny.setOnClickListener { onClickDeny(party) }
 
-                if(party.accepted == 1) {
-                    button_accept.setVisibility(View.INVISIBLE)
-                    button_deny.setVisibility(View.INVISIBLE)
-                }
+      if (party.accepted == 1) {
+        text_status.text = context.getString(R.string.my_invites_adapter_accepted)
+        button_accept.setVisibility(View.GONE)
+        button_deny.setVisibility(View.GONE)
+      }
 
-                if(party.accepted == -1) {
-                    card.setVisibility(View.INVISIBLE)
-                }
-            }
-        }
+      if (party.accepted == -1) {
+        card.setVisibility(View.GONE)
+      }
+    }
+  }
 
 
 }

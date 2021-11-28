@@ -25,7 +25,7 @@
     // main activity detail strings
     <string name="main_activity_detail_title_new">New Party</string>
     <string name="main_activity_detail_title_manage">Party</string>
-    <string name="main_activity_detail_subtitle_new">Create a party:</string>
+    <string name="main_activity_detail_subtitle_new">Create a new party:</string>
     <string name="main_activity_detail_subtitle_manage">Manage a party:</string>
 
     <string name="main_activity_detail_party_name">Party name</string>
@@ -61,4 +61,5 @@
     // my invites list item
     <string name="my_invites_item_deny">Deny</string>
     <string name="my_invites_item_accept">Accept</string>
+  <string name="my_invites_adapter_accepted">Accepted</string>
 </resources>
