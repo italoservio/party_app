@@ -20,66 +20,86 @@ import retrofit2.Response
 
 
 class MainActivity : AppCompatActivity() {
-  private var clicked : Boolean = false
+  private var clicked: Boolean = false
 
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main)
     val user = intent.getSerializableExtra("user") as User
-    var mainfab = findViewById<FloatingActionButton>(R.id.main_fab)
-    var addfab = findViewById<FloatingActionButton>(R.id.add_fab)
-    var bellfab = findViewById<FloatingActionButton>(R.id.bell_fab)
+    val mainfab = findViewById<FloatingActionButton>(R.id.main_fab)
+    val addfab = findViewById<FloatingActionButton>(R.id.add_fab)
+    val bellfab = findViewById<FloatingActionButton>(R.id.bell_fab)
 
-    mainfab.setOnClickListener{
+    mainfab.setOnClickListener {
       onMainButtonClick(mainfab, addfab, bellfab)
     }
-    addfab.setOnClickListener{
+    addfab.setOnClickListener {
       val intent = Intent(this, DetailsPartyActivity::class.java)
+      intent.putExtra("user", user)
+      startActivity(intent)
+    }
+    bellfab.setOnClickListener {
+      val intent = Intent(this, MyInvitesActivity::class.java)
       intent.putExtra("user", user)
       startActivity(intent)
     }
 
     loadParties(user);
   }
-  private fun onMainButtonClick(mainfab: FloatingActionButton, addfab: FloatingActionButton, bellfab: FloatingActionButton){
-    setVisibility(clicked,mainfab, addfab, bellfab)
-    setAnimation(clicked,mainfab, addfab, bellfab)
+
+  private fun onMainButtonClick(
+    mainfab: FloatingActionButton,
+    addfab: FloatingActionButton,
+    bellfab: FloatingActionButton
+  ) {
+    setVisibility(clicked, mainfab, addfab, bellfab)
+    setAnimation(clicked, mainfab, addfab, bellfab)
     clicked = !clicked
   }
 
-  private fun setAnimation(clicked: Boolean, mainfab: FloatingActionButton, addfab: FloatingActionButton, bellfab: FloatingActionButton) {
-    val fabOpen : Animation =  AnimationUtils.loadAnimation(this, R.anim.fab_open)
-    val fabClose : Animation =  AnimationUtils.loadAnimation(this, R.anim.fab_close)
-    val rotateForward : Animation =  AnimationUtils.loadAnimation(this, R.anim.rotate_forward)
-    val rotateBackward : Animation =  AnimationUtils.loadAnimation(this, R.anim.rotate_backward)
-    if (!clicked){
+  private fun setAnimation(
+    clicked: Boolean,
+    mainfab: FloatingActionButton,
+    addfab: FloatingActionButton,
+    bellfab: FloatingActionButton
+  ) {
+    val fabOpen: Animation = AnimationUtils.loadAnimation(this, R.anim.fab_open)
+    val fabClose: Animation = AnimationUtils.loadAnimation(this, R.anim.fab_close)
+    val rotateForward: Animation = AnimationUtils.loadAnimation(this, R.anim.rotate_forward)
+    val rotateBackward: Animation = AnimationUtils.loadAnimation(this, R.anim.rotate_backward)
+    if (!clicked) {
       mainfab.startAnimation(rotateForward)
       addfab.startAnimation(fabOpen)
       bellfab.startAnimation(fabOpen)
-    }else{
+    } else {
       mainfab.startAnimation(rotateBackward)
       addfab.startAnimation(fabClose)
       bellfab.startAnimation(fabClose)
     }
   }
 
-  private fun setVisibility(clicked: Boolean, mainfab: FloatingActionButton, addfab: FloatingActionButton, bellfab: FloatingActionButton) {
-    if (!clicked){
+  private fun setVisibility(
+    clicked: Boolean,
+    mainfab: FloatingActionButton,
+    addfab: FloatingActionButton,
+    bellfab: FloatingActionButton
+  ) {
+    if (!clicked) {
       addfab.visibility = View.VISIBLE
       bellfab.visibility = View.VISIBLE
-    }else{
+    } else {
       addfab.visibility = View.GONE
       bellfab.visibility = View.GONE
     }
   }
 
 
-  private fun loadParties(user : User){
-    val service = RetrofitParty().serviceUser()
-    val call = service.list(user.token)
+  private fun loadParties(user: User) {
+    val service = RetrofitParty().serviceParty()
+    val call = service.listParty(user.token)
 
-    call.enqueue(object: retrofit2.Callback<List<Party>> {
+    call.enqueue(object : retrofit2.Callback<List<Party>> {
       override fun onResponse(call: Call<List<Party>>, response: Response<List<Party>>) {
         if (response.code() == 200) {
           response.body()?.let { body ->
@@ -104,15 +124,14 @@ class MainActivity : AppCompatActivity() {
     })
   }
 
-  private fun fillParties(parties : List<Party>, user : User){
+  private fun fillParties(parties: List<Party>, user: User) {
     val list = findViewById<RecyclerView>(R.id.list)
-    list.adapter = PartyAdapter(this, parties,
-      {
-          party -> val intent = Intent(this, DetailsPartyActivity::class.java)
-          intent.putExtra("party", party)
-          intent.putExtra("user", user)
-          startActivity(intent)
-      })
+    list.adapter = PartyAdapter(this, parties) { party ->
+      val intent = Intent(this, DetailsPartyActivity::class.java)
+      intent.putExtra("party", party)
+      intent.putExtra("user", user)
+      startActivity(intent)
+    }
 
     list.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
   }

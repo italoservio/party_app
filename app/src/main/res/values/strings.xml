@@ -37,4 +37,28 @@
     <string name="main_activity_detail_button_submit">Submit</string>
     <string name="main_activity_detail_button_back">Back</string>
 
+    // members activity strings
+    <string name="members_activity_title">Members</string>
+    <string name="members_activity_subtitle">Manage your party members</string>
+    <string name="members_activity_member_email">Member e-mail</string>
+    <string name="members_activity_member_invite">Invite</string>
+
+    // costs activity strings
+    <string name="costs_activity_title">Costs</string>
+    <string name="costs_activity_subtitle">Manage any additional coast</string>
+    <string name="costs_activity_cost_description">Description</string>
+    <string name="costs_activity_cost_price">Price</string>
+    <string name="costs_activity_cost_add">Add cost</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    // my invites activity strings
+    <string name="my_invites_activity_title">My Invites</string>
+    <string name="my_invites_activity_subtitle">Your invites will appear here</string>
+
+    // my invites list item
+    <string name="my_invites_item_deny">Deny</string>
+    <string name="my_invites_item_accept">Accept</string>
 </resources>

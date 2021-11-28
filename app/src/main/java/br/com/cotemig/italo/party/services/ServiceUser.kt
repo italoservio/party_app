@@ -17,7 +17,7 @@ interface ServiceUser {
   fun create(@Body user: User): Call<Void>
 
   @GET("party/manager")
-  fun list(@Header("Authorization") token: String?) : Call<List<Party>>
+  fun list(@Header("Authorization") token: String?): Call<List<Party>>
 
   @POST("party")
   fun createParty(@Body party: Party?, @Header("Authorization") token: String): Call<Void>
