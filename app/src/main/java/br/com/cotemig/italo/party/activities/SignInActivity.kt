@@ -56,7 +56,7 @@ class SignInActivity : AppCompatActivity() {
         } else {
           Toast.makeText(
             this@SignInActivity,
-            "Usuário ou senha inválidos",
+            R.string.sign_in_activity_error_login,
             Toast.LENGTH_LONG
           ).show()
         }
@@ -65,7 +65,7 @@ class SignInActivity : AppCompatActivity() {
       override fun onFailure(call: Call<User>, t: Throwable) {
         Toast.makeText(
           this@SignInActivity,
-          "Um erro inesperado ocorreu",
+          R.string.generic_unexpected_error,
           Toast.LENGTH_LONG
         ).show()
       }

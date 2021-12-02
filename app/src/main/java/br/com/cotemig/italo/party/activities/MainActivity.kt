@@ -38,13 +38,11 @@ class MainActivity : AppCompatActivity() {
       val intent = Intent(this, DetailsPartyActivity::class.java)
       intent.putExtra("user", user)
       startActivity(intent)
-      finish()
     }
     bellfab.setOnClickListener {
       val intent = Intent(this, MyInvitesActivity::class.java)
       intent.putExtra("user", user)
       startActivity(intent)
-      finish()
     }
 
     loadParties(user);
@@ -109,7 +107,7 @@ class MainActivity : AppCompatActivity() {
         } else {
           Toast.makeText(
             this@MainActivity,
-            "Não foi possível listar as festas.",
+            R.string.main_activity_list_error,
             Toast.LENGTH_LONG
           ).show()
         }
@@ -118,7 +116,7 @@ class MainActivity : AppCompatActivity() {
       override fun onFailure(call: Call<List<Party>>, t: Throwable) {
         Toast.makeText(
           this@MainActivity,
-          "Um erro inesperado ocorreu",
+          R.string.generic_unexpected_error,
           Toast.LENGTH_LONG
         ).show()
       }
@@ -132,7 +130,6 @@ class MainActivity : AppCompatActivity() {
       intent.putExtra("party", party)
       intent.putExtra("user", user)
       startActivity(intent)
-      finish()
     }
 
     list.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)

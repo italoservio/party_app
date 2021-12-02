@@ -51,7 +51,7 @@ class MembersActivity : AppCompatActivity() {
         if (response.code() == 201) {
           Toast.makeText(
             this@MembersActivity,
-            "Membro convidado com sucesso",
+            R.string.members_activity_invite_success,
             Toast.LENGTH_LONG
           ).show()
           val intent = Intent(this@MembersActivity, MainActivity::class.java)
@@ -61,7 +61,7 @@ class MembersActivity : AppCompatActivity() {
         } else {
           Toast.makeText(
             this@MembersActivity,
-            "Não foi possível adicionar o membro a festa.",
+            R.string.members_activity_invite_error,
             Toast.LENGTH_LONG
           ).show()
         }
@@ -70,7 +70,7 @@ class MembersActivity : AppCompatActivity() {
       override fun onFailure(call: Call<Void>, t: Throwable) {
         Toast.makeText(
           this@MembersActivity,
-          "Um erro inesperado ocorreu",
+          R.string.generic_unexpected_error,
           Toast.LENGTH_LONG
         ).show()
       }
@@ -90,7 +90,7 @@ class MembersActivity : AppCompatActivity() {
         } else {
           Toast.makeText(
             this@MembersActivity,
-            "Não foi possível listar os membros da festa.",
+            R.string.members_activity_list_error,
             Toast.LENGTH_LONG
           ).show()
         }
@@ -99,7 +99,7 @@ class MembersActivity : AppCompatActivity() {
       override fun onFailure(call: Call<Party>, t: Throwable) {
         Toast.makeText(
           this@MembersActivity,
-          "Um erro inesperado ocorreu",
+          R.string.generic_unexpected_error,
           Toast.LENGTH_LONG
         ).show()
       }

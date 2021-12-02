@@ -1,13 +1,22 @@
 <resources>
     <string name="app_name">party</string>
+    <string name="generic_unexpected_error">An error occurred!</string>
+    <string name="generic_success">Success!</string>
+    <string name="party">party</string>
+    <string name="user">user</string>
 
+
+    // sign in activity strings
     <string name="sign_in_activity_submit">Submit</string>
     <string name="sign_in_activity_password">Password</string>
     <string name="sign_in_activity_email">E-mail</string>
     <string name="sign_in_activity_title">Welcome</string>
     <string name="sign_in_activity_subtitle">Please authenticate using \nthe below form:</string>
     <string name="sign_in_activity_link_sign_up"><u>Sign Up</u></string>
+    <string name="sign_in_activity_error_login"><u>Wrong username or password!</u></string>
 
+
+    // sign up activity strings
     <string name="sign_up_activity_title">Account\nCreation</string>
     <string name="sign_up_activity_subtitle">Please, fill in the fields \nto register</string>
     <string name="sign_up_activity_name">Name</string>
@@ -15,11 +24,13 @@
     <string name="sign_up_activity_password">Password</string>
     <string name="sign_up_activity_back_to_login"><u>Back to login</u></string>
     <string name="sign_up_activity_submit">Submit</string>
+    <string name="sign_up_activity_error_create_user">An error occurred while creating an user!</string>
 
 
     // main activity strings
     <string name="main_activity_title">My Parties</string>
     <string name="main_activity_subtitle">See and manage all your \nparties on the list below:</string>
+    <string name="main_activity_list_error">An error occurred while listing your parties!</string>
 
 
     // main activity detail strings
@@ -27,7 +38,6 @@
     <string name="main_activity_detail_title_manage">Party</string>
     <string name="main_activity_detail_subtitle_new">Create a new party:</string>
     <string name="main_activity_detail_subtitle_manage">Manage a party:</string>
-
     <string name="main_activity_detail_party_name">Party name</string>
     <string name="main_activity_detail_max_members">Max. members</string>
     <string name="main_activity_detail_max_cost">Max. cost</string>
@@ -36,12 +46,17 @@
     <string name="main_activity_detail_button_add_cost">Add cost</string>
     <string name="main_activity_detail_button_submit">Submit</string>
     <string name="main_activity_detail_button_back">Back</string>
+    <string name="main_activity_detail_create_error">We were unable to create this party!</string>
+    <string name="main_activity_detail_create_success">Party created!</string>
 
     // members activity strings
     <string name="members_activity_title">Members</string>
     <string name="members_activity_subtitle">Manage your party members</string>
     <string name="members_activity_member_email">Member e-mail</string>
     <string name="members_activity_member_invite">Invite</string>
+    <string name="members_activity_list_error">An error occurred while listing members!</string>
+    <string name="members_activity_invite_error">We were unable to invite this member!</string>
+    <string name="members_activity_invite_success">Member invited!</string>
 
     // costs activity strings
     <string name="costs_activity_title">Costs</string>
@@ -49,17 +64,23 @@
     <string name="costs_activity_cost_description">Description</string>
     <string name="costs_activity_cost_price">Price</string>
     <string name="costs_activity_cost_add">Add cost</string>
-    <string name="title_activity_main2">MainActivity2</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="costs_activity_create_error">We were unable to create this cost!</string>
+    <string name="costs_activity_list_error">An error occurred while listing costs!</string>
 
     // my invites activity strings
     <string name="my_invites_activity_title">My Invites</string>
     <string name="my_invites_activity_subtitle">Your invites will appear here</string>
+    <string name="my_invites_activity_list_error">An error occurred while listing your invites!</string>
+    <string name="my_invites_activity_decline_invite_error">We were unable to decline this invite!</string>
+    <string name="my_invites_activity_decline_invite_success">Invite declined! Reloading...</string>
+    <string name="my_invites_activity_accept_invite_error">We were unable to accept this invite!</string>
+    <string name="my_invites_activity_accept_invite_success">Invite accepted! Reloading...</string>
 
-    // my invites list item
+    // my invite item strings
     <string name="my_invites_item_deny">Deny</string>
     <string name="my_invites_item_accept">Accept</string>
-  <string name="my_invites_adapter_accepted">Accepted</string>
+    <string name="my_invites_adapter_accepted">Accepted</string>
 </resources>

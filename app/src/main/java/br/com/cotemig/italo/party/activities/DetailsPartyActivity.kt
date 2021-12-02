@@ -56,9 +56,7 @@ class DetailsPartyActivity : AppCompatActivity() {
 
     val back = findViewById<Button>(R.id.button_back)
     back.setOnClickListener() {
-      val intent = Intent(this, MainActivity::class.java)
-      intent.putExtra("user", user)
-      startActivity(intent)
+      finish()
     }
   }
 
@@ -107,7 +105,7 @@ class DetailsPartyActivity : AppCompatActivity() {
         if (response.code() == 201) {
           Toast.makeText(
             this@DetailsPartyActivity,
-            "Sucesso!",
+            R.string.main_activity_detail_create_success,
             Toast.LENGTH_LONG
           ).show()
           val intent = Intent(this@DetailsPartyActivity, MainActivity::class.java)
@@ -117,7 +115,7 @@ class DetailsPartyActivity : AppCompatActivity() {
         } else {
           Toast.makeText(
             this@DetailsPartyActivity,
-            "Não foi possível criar a festa.",
+            R.string.main_activity_detail_create_error,
             Toast.LENGTH_LONG
           ).show()
         }
@@ -126,7 +124,7 @@ class DetailsPartyActivity : AppCompatActivity() {
       override fun onFailure(call: Call<Void>, t: Throwable) {
         Toast.makeText(
           this@DetailsPartyActivity,
-          "Um erro inesperado ocorreu",
+          R.string.generic_unexpected_error,
           Toast.LENGTH_LONG
         ).show()
       }

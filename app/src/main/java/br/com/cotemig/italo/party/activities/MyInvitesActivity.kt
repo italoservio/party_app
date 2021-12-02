@@ -44,7 +44,7 @@ class MyInvitesActivity : AppCompatActivity() {
         } else {
           Toast.makeText(
             this@MyInvitesActivity,
-            "Não foi possível listar seus convites.",
+            R.string.my_invites_activity_list_error,
             Toast.LENGTH_LONG
           ).show()
         }
@@ -53,7 +53,7 @@ class MyInvitesActivity : AppCompatActivity() {
       override fun onFailure(call: Call<List<Party>>, t: Throwable) {
         Toast.makeText(
           this@MyInvitesActivity,
-          "Um erro inesperado ocorreu",
+          R.string.generic_unexpected_error,
           Toast.LENGTH_LONG
         ).show()
       }
@@ -86,7 +86,7 @@ class MyInvitesActivity : AppCompatActivity() {
           response.body()?.let {
             Toast.makeText(
               this@MyInvitesActivity,
-              "Aceito com sucesso! Recarregando...",
+              R.string.my_invites_activity_accept_invite_success,
               Toast.LENGTH_LONG
             ).show()
             loadInvitedParties(user)
@@ -94,7 +94,7 @@ class MyInvitesActivity : AppCompatActivity() {
         } else {
           Toast.makeText(
             this@MyInvitesActivity,
-            "Não foi possível aceitar o convite.",
+            R.string.my_invites_activity_accept_invite_error,
             Toast.LENGTH_LONG
           ).show()
         }
@@ -103,7 +103,7 @@ class MyInvitesActivity : AppCompatActivity() {
       override fun onFailure(call: Call<Void>, t: Throwable) {
         Toast.makeText(
           this@MyInvitesActivity,
-          "Um erro inesperado ocorreu",
+          R.string.generic_unexpected_error,
           Toast.LENGTH_LONG
         ).show()
       }
@@ -124,7 +124,7 @@ class MyInvitesActivity : AppCompatActivity() {
           response.body()?.let {
             Toast.makeText(
               this@MyInvitesActivity,
-              "Recusado com sucesso! Recarregando...",
+              R.string.my_invites_activity_decline_invite_success,
               Toast.LENGTH_LONG
             ).show()
             loadInvitedParties(user)
@@ -132,7 +132,7 @@ class MyInvitesActivity : AppCompatActivity() {
         } else {
           Toast.makeText(
             this@MyInvitesActivity,
-            "Não foi possível recusar o convite.",
+            R.string.my_invites_activity_decline_invite_error,
             Toast.LENGTH_LONG
           ).show()
         }
@@ -141,7 +141,7 @@ class MyInvitesActivity : AppCompatActivity() {
       override fun onFailure(call: Call<Void>, t: Throwable) {
         Toast.makeText(
           this@MyInvitesActivity,
-          "Um erro inesperado ocorreu",
+          R.string.generic_unexpected_error,
           Toast.LENGTH_LONG
         ).show()
       }

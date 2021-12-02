@@ -49,7 +49,7 @@ class CostsActivity : AppCompatActivity() {
         } else {
           Toast.makeText(
             this@CostsActivity,
-            "Não foi possível adicionar o custo à festa.",
+            R.string.costs_activity_list_error,
             Toast.LENGTH_LONG
           ).show()
         }
@@ -58,7 +58,7 @@ class CostsActivity : AppCompatActivity() {
       override fun onFailure(call: Call<Party>, t: Throwable) {
         Toast.makeText(
           this@CostsActivity,
-          "Um erro inesperado ocorreu",
+          R.string.generic_unexpected_error,
           Toast.LENGTH_LONG
         ).show()
       }
@@ -88,7 +88,7 @@ class CostsActivity : AppCompatActivity() {
         } else {
           Toast.makeText(
             this@CostsActivity,
-            "Não foi possível adicionar o custo à festa.",
+            R.string.costs_activity_create_error,
             Toast.LENGTH_LONG
           ).show()
         }
@@ -97,7 +97,7 @@ class CostsActivity : AppCompatActivity() {
       override fun onFailure(call: Call<Void>, t: Throwable) {
         Toast.makeText(
           this@CostsActivity,
-          "Um erro inesperado ocorreu",
+          R.string.generic_unexpected_error,
           Toast.LENGTH_LONG
         ).show()
       }

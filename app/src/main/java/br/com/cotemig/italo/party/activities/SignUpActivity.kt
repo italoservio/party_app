@@ -52,7 +52,7 @@ class SignUpActivity : AppCompatActivity() {
         if (response.code() == 201) {
           Toast.makeText(
             this@SignUpActivity,
-            "Sucesso!",
+            R.string.generic_success,
             Toast.LENGTH_LONG
           ).show()
           val intent = Intent(this@SignUpActivity, SignInActivity::class.java)
@@ -61,7 +61,7 @@ class SignUpActivity : AppCompatActivity() {
         } else {
           Toast.makeText(
             this@SignUpActivity,
-            "Não foi possível criar o usuário",
+            R.string.sign_up_activity_error_create_user,
             Toast.LENGTH_LONG
           ).show()
         }
@@ -70,7 +70,7 @@ class SignUpActivity : AppCompatActivity() {
       override fun onFailure(call: Call<Void>, t: Throwable) {
         Toast.makeText(
           this@SignUpActivity,
-          "Um erro inesperado ocorreu",
+          R.string.generic_unexpected_error,
           Toast.LENGTH_LONG
         ).show()
       }
