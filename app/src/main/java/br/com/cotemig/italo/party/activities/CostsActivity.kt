@@ -85,6 +85,7 @@ class CostsActivity : AppCompatActivity() {
           val intent = Intent(this@CostsActivity, MainActivity::class.java)
           intent.putExtra("user", user)
           startActivity(intent)
+          finish()
         } else {
           Toast.makeText(
             this@CostsActivity,
